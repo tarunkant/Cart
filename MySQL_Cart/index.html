@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>Cart</title>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function validateForm() {
+    var x = document.forms["MyForm"]["username"].value;
+    if (x == "") {
+        alert("Username must be filled out");
+        return false;
+    }
+    var y = document.forms["MyForm"]["password"].value;
+    if (y == "") {
+        alert("Password must be filled out");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+<h1 style= "font-size:40px; font-family:courier; color:#FF0000; text-align:center">Login</h1>
+<div class="login-page">
+  <div class="form">
+    <form name="MyForm" method="POST" action="login.php" onsubmit="return validateForm()">
+      <input type="text" name="username" placeholder="username" class="form-control">
+      <input type="password" name="password" placeholder="password" class="form-control">
+      <button>login</button>
+      <form method="POST" action="register.php">
+      <p class="message">Not registered? <a href="register.php">Create an account</a></p>
+      </form>
+      </form>
+  </div>
+</div>
+</body>
